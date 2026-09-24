@@ -1,0 +1,34 @@
+# Cargo.toml - Build specification and dependency registry for `nibbles`.
+#
+# Copyright 2026 Emerge Cooperative
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+[package]
+name = "nibbles"
+version = "0.1.0"
+edition = "2021"
+authors = ["Arc Riley <arcriley@gmail.com>"]
+license = "AGPL-3.0-or-later"
+description = "Optimized math operations on arrays of 4-bit integers"
+repository = "https://github.com/arcriley/nibbles"
+homepage = "https://github.com/arcriley/nibbles"
+documentation = "https://docs.rs/nibbles"
+readme = "README.md"
+keywords = ["u4", "int4", "nibble", "simd", "quantization"]
+categories = ["data-structures", "hardware-support", "science"]
+
+[lib]
+name = "nibbles"
+path = "src/lib.rs"
