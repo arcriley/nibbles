@@ -36,15 +36,13 @@ else
   rust_target = 'debug'
 endif
 
-# Build and install static library artifact
+# Build Rust library artifact (.rlib)
 cargo_lib_target = custom_target(
   'nibbles-lib',
-  output: 'libnibbles.a',
+  output: 'libnibbles.rlib',
   build_by_default: true,
   build_always_stale: true,
   console: true,
-  install: true,
-  install_dir: get_option('libdir'),
   command: [
     sh_bin, '-c',
     'CARGO_HOME=' + cargo_home_dir + ' ' +
@@ -52,6 +50,6 @@ cargo_lib_target = custom_target(
     '--manifest-path ' + manifest_path + ' ' +
     '--target-dir ' + cargo_build_dir + ' ' +
     '--lib ' + cargo_release_flag + ' && ' +
-    'cp ' + cargo_build_dir / rust_target / 'libnibbles.a' + ' @OUTPUT@'
+    'cp ' + cargo_build_dir / rust_target / 'libnibbles.rlib' + ' @OUTPUT@'
   ],
 )
