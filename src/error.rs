@@ -1,4 +1,4 @@
-/*  src/error.rs  Error types for the shaled crate.
+/*  src/error.rs  Error types for the nibbles crate.
  *
  *  Copyright 2026 Emerge Cooperative
  *
@@ -18,10 +18,10 @@
 
 use thiserror::Error;
 
-/// Errors returned by `shaled` layer loading and tensor execution routines.
+/// Errors returned by `nibbles` layer loading and tensor execution routines.
 #[derive(Debug, Error)]
 pub enum NibbleError {
-    /// Standard I/O failures when opening or reading model shards.
+    /// Standard I/O failure when opening or reading model shards.
     #[error("I/O error: {0}")]
     Io(#[from] std::io::Error),
 
